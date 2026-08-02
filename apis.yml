@@ -1,8 +1,30 @@
 aid: vlocity
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vlocity.png
 name: Vlocity
-description: 'Vlocity is a company surfaced as a portfolio company of bessemer-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: cloud. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Vlocity was an industry-cloud software company founded in 2014 (by David
+  Schmaier and team) that built vertical CRM applications on the Salesforce
+  Platform for communications, media, energy, insurance, health, and the public
+  sector, along with the OmniStudio low-code toolset (OmniScript, FlexCards,
+  DataRaptor, Integration Procedures). Backed by Bessemer Venture Partners,
+  Accel, Sutter Hill Ventures, and Salesforce Ventures, Vlocity was acquired by
+  Salesforce in 2020 and folded into Salesforce Industries; the platform now
+  ships as Salesforce OmniStudio. Vlocity no longer exists as an independent
+  company and publishes no independent developer portal or public API — its
+  domain (vlocity.com) is defunct (HTTP 503) and is now operated by Salesforce
+  (confirmed via SPF/DMARC delegation to salesforce.com and a Salesforce, Inc.
+  TLS certificate). Any API surface lives under Salesforce OmniStudio.
 url: https://raw.githubusercontent.com/api-evangelist/vlocity/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +32,32 @@ x-backed-by:
 - bessemer-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: salesforce
+x-successor: Salesforce OmniStudio / Salesforce Industries
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Cloud
+- CRM
+- Industry Cloud
+- Low-Code
+- Salesforce
+- Acquired
 apis: []
+common:
+- type: DomainSecurity
+  name: Domain Security Probe
+  url: https://raw.githubusercontent.com/api-evangelist/vlocity/refs/heads/main/security/vlocity-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1

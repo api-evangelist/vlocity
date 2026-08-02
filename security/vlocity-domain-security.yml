@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: probed
+source: dig + openssl + curl HEAD against vlocity.com
+note: >-
+  Vlocity was acquired by Salesforce in 2020 and folded into Salesforce
+  Industries / OmniStudio; vlocity.com is no longer an independent developer
+  surface. The probe confirms Salesforce now operates the domain: SPF includes
+  _spf.salesforce.com, DMARC is delegated to _dmarc.reject100.salesforce.com,
+  and the TLS certificate is issued to O=Salesforce, Inc. The site itself
+  returns HTTP 503 (Akamai) at the application layer.
+hosts:
+  - host: www.vlocity.com
+    https: true
+    http_status: 503
+    tls_version: TLSv1.3
+    tls_cert_org: Salesforce, Inc.
+    tls_cert_not_after: '2026-12-17'
+    hsts: true
+    hsts_max_age: 31536000
+domains:
+  - domain: vlocity.com
+    dnssec: true
+    caa: []
+    spf: true
+    spf_includes:
+      - _spf.google.com
+      - _spf.salesforce.com
+      - aspmx.pardot.com
+    dmarc: true
+    dmarc_policy: reject
+    dmarc_delegated_to: _dmarc.reject100.salesforce.com
