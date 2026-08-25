@@ -12,19 +12,14 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vlocity.png
 name: Vlocity
-description: >-
-  Vlocity was an industry-cloud software company founded in 2014 (by David
-  Schmaier and team) that built vertical CRM applications on the Salesforce
-  Platform for communications, media, energy, insurance, health, and the public
-  sector, along with the OmniStudio low-code toolset (OmniScript, FlexCards,
-  DataRaptor, Integration Procedures). Backed by Bessemer Venture Partners,
-  Accel, Sutter Hill Ventures, and Salesforce Ventures, Vlocity was acquired by
-  Salesforce in 2020 and folded into Salesforce Industries; the platform now
-  ships as Salesforce OmniStudio. Vlocity no longer exists as an independent
-  company and publishes no independent developer portal or public API — its
-  domain (vlocity.com) is defunct (HTTP 503) and is now operated by Salesforce
-  (confirmed via SPF/DMARC delegation to salesforce.com and a Salesforce, Inc.
-  TLS certificate). Any API surface lives under Salesforce OmniStudio.
+description: Vlocity was an industry-cloud software company founded in 2014 (by David Schmaier and team) that built
+  vertical CRM applications on the Salesforce Platform for communications, media, energy, insurance, health, and
+  the public sector, along with the OmniStudio low-code toolset (OmniScript, FlexCards, DataRaptor, Integration
+  Procedures). Backed by Bessemer Venture Partners, Accel, Sutter Hill Ventures, and Salesforce Ventures, Vlocity
+  was acquired by Salesforce in 2020 and folded into Salesforce Industries; the platform now ships as Salesforce
+  OmniStudio. Vlocity no longer exists as an independent company and publishes no independent developer portal or
+  public API — its domain (vlocity.com) is defunct (HTTP 503) and is now operated by Salesforce (confirmed via SPF/DMARC
+  delegation to salesforce.com and a Salesforce, Inc. TLS certificate). Any API surface lives under Salesforce OmniStudio.
 url: https://raw.githubusercontent.com/api-evangelist/vlocity/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -37,7 +32,7 @@ x-acquired-by: salesforce
 x-successor: Salesforce OmniStudio / Salesforce Industries
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-08-21'
 tags:
 - Company
 - Cloud
@@ -48,6 +43,12 @@ tags:
 - Acquired
 apis: []
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/salesforce/
+  name: Salesforce
+  x-relationship: acquisition
+  x-generated-by: salesforce-family:2026-08-21
+  x-acquired: 2020
 - type: DomainSecurity
   name: Domain Security Probe
   url: https://raw.githubusercontent.com/api-evangelist/vlocity/refs/heads/main/security/vlocity-domain-security.yml
@@ -61,3 +62,6 @@ x-enrichment:
   status: minimal
   artifacts_added: 1
   pass: local-v1
+x-parent: salesforce
+x-relationship: acquisition
+x-acquired: 2020
